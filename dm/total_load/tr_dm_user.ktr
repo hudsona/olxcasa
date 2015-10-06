@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_dm_user</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;08&#x2f;11 11&#x3a;15&#x3a;00.824</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#x2f;08&#x2f;11 11&#x3a;15&#x3a;00.824</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>is_seller ser&#xe1; true caso o first_approval_date for diferente de nulo</note>
+      <xloc>168</xloc>
+      <yloc>209</yloc>
+      <width>366</width>
+      <heigth>24</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>12</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>blocketdb</name>
+    <server>&#x24;&#x7b;BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>dw_blocketdb</name>
+    <server>&#x24;&#x7b;DW_BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DW_BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;DW_BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;DW_BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>ads_approval</from><to>ads_deleted</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_created</from><to>ads_approval</to><enabled>Y</enabled> </hop>
+  <hop> <from>first category, subcategory seller</from><to>ads_created</to><enabled>Y</enabled> </hop>
+  <hop> <from>product</from><to>get last seller ad</to><enabled>Y</enabled> </hop>
+  <hop> <from>get last seller ad</from><to>first category, subcategory buyer</to><enabled>Y</enabled> </hop>
+  <hop> <from>first category, subcategory buyer</from><to>get last buyer ad_reply</to><enabled>Y</enabled> </hop>
+  <hop> <from>get last buyer ad_reply</from><to>number_of_ad_replies</to><enabled>Y</enabled> </hop>
+  <hop> <from>number_of_ad_replies</from><to>get type, date_migration and time_migration</to><enabled>Y</enabled> </hop>
+  <hop> <from>ods.user</from><to>first category, subcategory seller</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_deleted</from><to>has_ad_pro</to><enabled>Y</enabled> </hop>
+  <hop> <from>has_ad_pro</from><to>product</to><enabled>Y</enabled> </hop>
+  <hop> <from>get type, date_migration and time_migration</from><to>dm.user</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>ads_approval</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_approved&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;where ad.seller_id_fk &#x3d; seller.seller_id_pk &#xa;  and seller_id_nk &#x3d; &#x3f;&#xa;  and approval_date is not null</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>550</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_created</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_created&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;where ad.seller_id_fk &#x3d; seller.seller_id_pk &#xa;  and seller_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>427</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_deleted</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_deleted&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;where ad.seller_id_fk &#x3d; seller.seller_id_pk &#xa;and seller_id_nk &#x3d; &#x3f;&#xa;and deletion_date is not null</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>664</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dm.user</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <schema>dm</schema>
+    <table>user</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1444</xloc>
+      <yloc>308</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>first category, subcategory buyer</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select  category.category_name as first_subcategory_buyer&#xa;	   ,category_main.category_main_name as first_category_buyer&#xa;	   ,region.region_name as first_region_buyer&#xa;from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.buyer&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad_reply&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category_main&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.region&#xa; where ad.region_id_fk &#x3d; region.region_id_pk&#xa; and buyer.buyer_id_pk &#x3d; ad_reply.buyer_id_fk&#xa; and ad_reply.ad_id_fk &#x3d; ad.ad_id_pk&#xa; and ad.category_id_fk &#x3d; category.category_id_pk&#xa; and category.category_main_id_fk &#x3d; category_main.category_main_id_pk&#xa; and ad_reply.rank &#x3d; 1&#xa; and buyer_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1035</xloc>
+      <yloc>174</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>first category, subcategory seller</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select category.category_name as first_subcategory_seller&#xa;       ,category_main.category_main_name as first_category_seller&#xa;  	   ,region.region_name as first_region_seller&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller &#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category &#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category_main&#xa;       ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.region&#xa; where ad.region_id_fk &#x3d; region.region_id_pk&#xa;   and ad.seller_id_fk &#x3d; seller.seller_id_pk&#xa;   and ad.category_id_fk &#x3d; category.category_id_pk&#xa;   and category.category_main_id_fk &#x3d; category_main.category_main_id_pk&#xa;   and ad.rank_approval &#x3d; 1&#xa;   and seller_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>270</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get last buyer ad_reply</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select max&#x28;ad_reply_creation_date&#x29; as last_ad_reply_date&#xa;from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad_reply&#xa;	,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.buyer&#xa;where ad_reply.buyer_id_fk &#x3d; buyer.buyer_id_pk&#xa;and buyer_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1035</xloc>
+      <yloc>284</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get last seller ad</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select max&#x28;ad.approval_date&#x29; as last_ad_approval_date&#xa;from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;where ad.seller_id_fk &#x3d; seller.seller_id_pk&#xa;and seller_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1035</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get type, date_migration and time_migration</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>2</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var user_type&#x3b;&#xa;var days_to_migration &#x3d; 0&#x3b;&#xa;var date_migration&#x3d;null&#x3b;&#xa;&#xa;var type_entrance&#x3b;&#xa;var date_entrance&#x3b;&#xa;var category_entrance&#x3b;&#xa;var subcategory_entrance&#x3b;&#xa;var region_entrance&#x3b;&#xa;&#xa;var category_migration&#x3d;null&#x3b;&#xa;var subcategory_migration&#x3d;null&#x3b;&#xa;var region_migration&#x3d;null&#x3b;&#xa;&#xa;  if&#x28;is_buyer &#x3d;&#x3d; true&#x29;&#x7b;&#xa;    user_type &#x3d; &#x27;buyer&#x27;&#x3b;&#xa;    type_entrance &#x3d; &#x22;buyer&#x22;&#x3b;&#xa;	category_entrance &#x3d; first_category_buyer&#x3b;&#xa;    subcategory_entrance &#x3d; first_subcategory_buyer&#x3b;&#xa;	region_entrance &#x3d; first_region_buyer&#xa;    date_entrance &#x3d; buyer_creation_date&#x3b;&#xa;&#xa;	if&#x28;is_seller &#x3d;&#x3d; true&#x29;&#x7b;&#xa;          	user_type &#x3d; &#x27;both&#x27;&#x3b;&#xa;        if &#x28;first_approval_date &#x3c; buyer_creation_date&#x29;&#x7b; &#x2f;&#x2f;entrou como seller depois como buyer  	&#xa;			type_entrance &#x3d; &#x22;seller&#x22;&#x3b;&#xa;			category_entrance &#x3d; first_category_seller&#x3b;&#xa;			subcategory_entrance &#x3d; first_subcategory_seller&#x3b;&#xa;			region_entrance &#x3d; first_region_seller&#x3b;&#xa;&#xa;			category_migration &#x3d; first_category_buyer&#x3b;&#xa;			subcategory_migration &#x3d; first_subcategory_buyer&#x3b;&#xa;			region_migration &#x3d; first_region_buyer&#x3b;&#xa;						&#xa;			days_to_migration &#x3d; abs&#x28;dateDiff&#x28;first_approval_date,buyer_creation_date,&#x22;d&#x22;&#x29;&#x29;&#x3b;&#xa;        	date_migration &#x3d; buyer_creation_date&#x3b;&#xa; 			date_entrance &#x3d;  first_approval_date&#x3b;&#xa;     		&#xa;		&#x7d;else&#x7b; &#x2f;&#x2f;entrou como buyer depois como seller&#xa;			type_entrance &#x3d; &#x22;buyer&#x22;&#x3b;&#xa;            category_entrance &#x3d; first_category_buyer&#x3b;&#xa;  			subcategory_entrance &#x3d; first_subcategory_buyer&#x3b;&#xa;			region_entrance &#x3d; first_region_buyer&#x3b;&#xa;&#xa;  			category_migration &#x3d; first_category_seller&#x3b;&#xa;  			subcategory_migration &#x3d; first_subcategory_seller&#x3b;&#xa;			region_migration &#x3d; first_region_seller&#x3b;&#xa;			&#xa;			days_to_migration &#x3d; abs&#x28;dateDiff&#x28;buyer_creation_date,first_approval_date,&#x22;d&#x22;&#x29;&#x29;&#x3b;&#xa;    		date_migration &#x3d; first_approval_date&#x3b;   &#xa;			date_entrance &#x3d;  buyer_creation_date&#x3b;    &#xa;		&#x7d;           &#xa;    &#x7d;&#xa;  &#x7d;else&#x7b;&#xa;  if&#x28;is_seller &#x3d;&#x3d; true&#x29;&#x7b;&#xa;    user_type &#x3d; &#x27;seller&#x27;&#x3b;&#xa;	type_entrance &#x3d; &#x22;seller&#x22;&#x3b;&#xa;	category_entrance &#x3d; first_category_seller&#x3b;&#xa;	subcategory_entrance &#x3d; first_subcategory_seller&#x3b;&#xa;    region_entrance &#x3d; first_region_seller&#xa;	date_entrance &#x3d; first_approval_date&#x3b;&#xa;  &#x7d;&#xa;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>user_type</name>
+        <rename>user_type</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>days_to_migration</name>
+        <rename>days_to_migration</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_migration</name>
+        <rename>date_migration</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>type_entrance</name>
+        <rename>type_entrance</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>date_entrance</name>
+        <rename>date_entrance</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>category_entrance</name>
+        <rename>category_entrance</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>subcategory_entrance</name>
+        <rename>subcategory_entrance</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>category_migration</name>
+        <rename>category_migration</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>subcategory_migration</name>
+        <rename>subcategory_migration</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>region_entrance</name>
+        <rename>region_entrance</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>region_migration</name>
+        <rename>region_migration</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1253</xloc>
+      <yloc>431</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>has_ad_pro</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#x28;case when count&#x28;ad_id_pk&#x29; &#x3d; 0 then false else true end&#x29;  has_ad_pro &#xa;from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.pri_pro&#xa;     ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;where ad.seller_id_fk &#x3d; seller.seller_id_pk&#xa;  and ad.pri_pro_id_fk &#x3d; pri_pro.pri_pro_id_pk&#xa;  and pri_pro_id_nk is true --pri_pro_name like &#x27;Professional&#x27;&#xa;  and seller_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>785</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>number_of_ad_replies</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ad_replies&#xa;from   &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad_reply&#xa;      ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.buyer&#xa;where buyer.buyer_id_pk &#x3d; ad_reply.buyer_id_fk&#xa;and buyer_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1035</xloc>
+      <yloc>431</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ods.user</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <sql>SELECT&#xa;  user_id_pk&#xa;, user_id_nk&#xa;, email&#xa;, case when coalesce&#x28;buyer_creation_date,&#x27;1900-01-01 00&#x3a;00&#x3a;00&#x27;&#x29;  &#x3d; &#x27;1900-01-01 00&#x3a;00&#x3a;00&#x27; then false else true end  as is_buyer&#xa;, case when coalesce&#x28;first_approval_date,&#x27;1900-01-01 00&#x3a;00&#x3a;00&#x27;&#x29; &#x3d; &#x27;1900-01-01 00&#x3a;00&#x3a;00&#x27; then false else true end as is_seller&#xa;, buyer_creation_date&#xa;, first_approval_date&#xa;, user_creation_date&#xa;FROM &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.&#x22;user&#x22;&#xa;where &#x28;buyer_creation_date is not null or first_approval_date is not null&#x29;&#xa;order by user_creation_date&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>116</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>product</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql> select count&#x28;&#x2a;&#x29; as products&#xa;   from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;		,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;		,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and ad.seller_id_fk &#x3d; seller.seller_id_pk &#xa;    and product_order.status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>user_id_nk</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>910</xloc>
+      <yloc>53</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

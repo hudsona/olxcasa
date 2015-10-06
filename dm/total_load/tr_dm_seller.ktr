@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_dm_seller</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;07&#x2f;25 15&#x3a;16&#x3a;24.563</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#x2f;07&#x2f;25 15&#x3a;16&#x3a;24.563</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>blocketdb</name>
+    <server>&#x24;&#x7b;BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>dw_blocketdb</name>
+    <server>&#x24;&#x7b;DW_BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DW_BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;DW_BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;DW_BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>get first_category and region</from><to>get second category</to><enabled>Y</enabled> </hop>
+  <hop> <from>get last category and last_creation_date</from><to>has_ad_pro</to><enabled>Y</enabled> </hop>
+  <hop> <from>is_buyer</from><to>bomnegocio_android_api</to><enabled>Y</enabled> </hop>
+  <hop> <from>Bump</from><to>WeeklyBumpG</to><enabled>Y</enabled> </hop>
+  <hop> <from>GalleryG</from><to>GalleryRec</to><enabled>Y</enabled> </hop>
+  <hop> <from>GalleryRec</from><to>WeeklyBumpRec</to><enabled>Y</enabled> </hop>
+  <hop> <from>WeeklyBumpG</from><to>GalleryG</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_sold_in_BN</from><to>is_buyer</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_expired</from><to>ads_adm_deleted</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_adm_deleted</from><to>ads_user_deleted</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_user_deleted</from><to>ads_sold_in_BN</to><enabled>Y</enabled> </hop>
+  <hop> <from>platform_web</from><to>platform_mobile_site</to><enabled>Y</enabled> </hop>
+  <hop> <from>platform_mobile_site</from><to>platform_unknown</to><enabled>Y</enabled> </hop>
+  <hop> <from>platform_unknown</from><to>product</to><enabled>Y</enabled> </hop>
+  <hop> <from>get second category</from><to>get last category and last_creation_date</to><enabled>Y</enabled> </hop>
+  <hop> <from>ods.seller</from><to>get first_category and region</to><enabled>Y</enabled> </hop>
+  <hop> <from>has_ad_pro</from><to>ads_created, ads_approved, ads_deleted</to><enabled>Y</enabled> </hop>
+  <hop> <from>ads_created, ads_approved, ads_deleted</from><to>ads_expired</to><enabled>Y</enabled> </hop>
+  <hop> <from>bomnegocio_android_api</from><to>bomnegocio_android_api_nextgen</to><enabled>Y</enabled> </hop>
+  <hop> <from>bomnegocio_android_api_nextgen</from><to>bomnegocio_ios_api_nextgen</to><enabled>Y</enabled> </hop>
+  <hop> <from>bomnegocio_ios_api_nextgen</from><to>bomnegocio_api_nextgen</to><enabled>Y</enabled> </hop>
+  <hop> <from>bomnegocio_api_nextgen</from><to>platform_autoupload</to><enabled>Y</enabled> </hop>
+  <hop> <from>platform_autoupload</from><to>platform_ad_importer_api</to><enabled>Y</enabled> </hop>
+  <hop> <from>platform_ad_importer_api</from><to>platform_web</to><enabled>Y</enabled> </hop>
+  <hop> <from>product</from><to>Bump</to><enabled>Y</enabled> </hop>
+  <hop> <from>PackageBronze</from><to>PackageSilver</to><enabled>Y</enabled> </hop>
+  <hop> <from>PackageGold</from><to>revenue</to><enabled>Y</enabled> </hop>
+  <hop> <from>PackageSilver</from><to>PackageGold</to><enabled>Y</enabled> </hop>
+  <hop> <from>WeeklyBumpRec</from><to>PackageBronze</to><enabled>Y</enabled> </hop>
+  <hop> <from>revenue</from><to>dm.seller</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Bump</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as bump&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;BUMP&#x27;&#xa;	and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>354</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GalleryG</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as galleryG&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;GALLERYG&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>578</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GalleryRec</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as galleryRec&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;GALLERYREC&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>704</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>WeeklyBumpG</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as weeklyBumpG&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;WEEKLYBUMPG&#x27;&#xa;	and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>467</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>WeeklyBumpRec</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as weeklyBumpRec&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;WEEKLYBUMPREC&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>828</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_adm_deleted</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_adm_deleted&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.reason_removed&#xa;where ad.reason_removed_id_fk &#x3d; reason_removed.reason_removed_id_pk&#xa;  and reason_removed_id_nk &#x3d; &#x27;admin_deleted&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1202</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_created, ads_approved, ads_deleted</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select  count&#x28;creation_date&#x29; as ads_created&#xa;	   ,count&#x28;approval_date&#x29; as ads_approved&#xa;	   ,count&#x28;deletion_date&#x29; as ads_deleted&#xa;from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;where seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>888</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_expired</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_expired&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.reason_removed&#xa;where ad.reason_removed_id_fk &#x3d; reason_removed.reason_removed_id_pk&#xa;  and reason_removed_id_nk &#x3d; &#x27;expired_deleted&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1081</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_sold_in_BN</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_sold_in_BN&#xa;from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.reason_removed_detail&#xa;where ad.reason_removed_detail_id_fk &#x3d; reason_removed_detail.reason_removed_detail_id_pk&#xa;  and reason_removed_detail_id_nk &#x3d; 1 --&#x27;Vendi pelo bomneg&#xf3;cio.com&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1463</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ads_user_deleted</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as ads_user_deleted&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.reason_removed&#xa;where ad.reason_removed_id_fk &#x3d; reason_removed.reason_removed_id_pk&#xa;  and reason_removed_id_nk &#x3d; &#x27;user_deleted&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1320</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>bomnegocio_android_api</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_mobile_android&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;bomnegocio_android_api&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1330</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>bomnegocio_android_api_nextgen</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_mobile_android_nextgen&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;nga_api_android&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1154</xloc>
+      <yloc>229</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>bomnegocio_api_nextgen</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_mobile_nextgen&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;nga_api_unknown&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>780</xloc>
+      <yloc>229</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>bomnegocio_ios_api_nextgen</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_mobile_ios_nextgen&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;nga_api_ios&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>951</xloc>
+      <yloc>229</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>dm.seller</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <schema>dm</schema>
+    <table>seller</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1320</xloc>
+      <yloc>518</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get first_category and region</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>  select category_main.category_main_name as first_category &#xa;	  ,category_name as first_subcategory &#xa;      ,region_name as first_region&#xa;      ,state_name as first_state&#xa;   	  ,source_redir.source_redir_id_nk as source_redir&#xa;	  ,ad_redir.param2&#xa;	  ,ad_redir.param3&#xa;	  ,ad_redir.param4&#xa;	  ,ad_redir.param5&#xa;	  ,ad_redir.param6&#xa;	  ,ad_redir.param7&#xa;	  ,ad_redir.redir_code&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category_main&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.region&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.state&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad_redir&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.source_redir&#xa;where ad.category_id_fk &#x3d; category.category_id_pk&#xa;  and category.category_main_id_fk &#x3d; category_main.category_main_id_pk&#xa;  and ad.region_id_fk &#x3d; region.region_id_pk&#xa;  and region.state_id_fk &#x3d; state.state_id_pk&#xa;  and ad.ad_id_pk &#x3d; ad_redir.ad_id_fk&#xa;  and ad_redir.source_redir_id_fk &#x3d; source_redir.source_redir_id_pk&#xa;  and rank_approval &#x3d; 1&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>196</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get last category and last_creation_date</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select category_main.category_main_name as last_category &#xa;	  ,category_name as last_subcategory&#xa;	  ,approval_date as last_approval_date&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category_main&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.region&#xa;where ad.category_id_fk &#x3d; category.category_id_pk&#xa;  and category.category_main_id_fk &#x3d; category_main.category_main_id_pk&#xa;  and ad.region_id_fk &#x3d; region.region_id_pk&#xa;  and rank_approval &#x3d; &#x28;select max&#x28;rank_approval&#x29; from ods.ad where seller_id_fk &#x3d; &#x3f;&#x29;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>524</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get second category</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select category_main.category_main_name as second_category &#xa;	  ,category_name as second_subcategory&#xa;	  ,approval_date as second_approval_date&#xa; from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.category_main&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.region&#xa;where ad.category_id_fk &#x3d; category.category_id_pk&#xa;  and category.category_main_id_fk &#x3d; category_main.category_main_id_pk&#xa;  and ad.region_id_fk &#x3d; region.region_id_pk&#xa;  and rank_approval &#x3d; 2&#xa;  and seller_id_fk &#x3d; &#x3f;&#xa;  </sql>
+    <outer_join>Y</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>345</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>has_ad_pro</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#x28;case when count&#x28;ad_id_pk&#x29; &#x3d; 0 then false else true end&#x29;  has_ad_pro &#xa;from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.pri_pro&#xa;where ad.pri_pro_id_fk &#x3d; pri_pro.pri_pro_id_pk&#xa;and pri_pro_id_nk is true --pri_pro_name like &#x27;Professional&#x27;&#xa;and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>697</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>is_buyer</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select &#x28;case when count&#x28;buyer_id_pk&#x29; &#x3d; 0 then false else true end&#x29; is_buyer &#xa;from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.buyer&#xa;where buyer_id_nk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>email</name>
+        <type>String</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1464</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ods.seller</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <sql>  SELECT&#xa;  seller.seller_id_pk&#xa;, seller.email&#xa;, seller.has_account&#xa;, pri_pro.pri_pro_name&#xa;, first_approval_date&#xa;, seller_creation_date&#xa;FROM  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.seller&#xa;	 ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.pri_pro&#xa;where seller.pri_pro_id_fk &#x3d; pri_pro.pri_pro_id_pk&#xa;and first_approval_date is not null&#xa;order by seller.seller_creation_date</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>74</xloc>
+      <yloc>27</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>platform_ad_importer_api</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_ad_importer_api&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;ad_importer_api&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>489</xloc>
+      <yloc>229</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>platform_autoupload</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_autoupload&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;autoupload&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>631</xloc>
+      <yloc>229</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>platform_mobile_site</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_mobile_site&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;ai_msite_php&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>216</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>platform_unknown</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; platform_unknown&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad &#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk is null &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>74</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>platform_web</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as platform_web&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.platform&#xa; where ad.platform_id_fk &#x3d; platform.platform_id_pk&#xa;  and  platform_id_nk &#x3d; &#x27;ai_web_php&#x27; &#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>342</xloc>
+      <yloc>151</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>product</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as products&#xa;  from  &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order &#xa;	   ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;  and status &#x3d; &#x27;PAID&#x27;&#xa;  and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>74</xloc>
+      <yloc>328</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PackageBronze</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as packageBronze&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;PACKAGE_BRONZE&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>962</xloc>
+      <yloc>341</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PackageGold</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as packageGold&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;PACKAGE_GOLD&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>839</xloc>
+      <yloc>549</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PackageSilver</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select count&#x28;&#x2a;&#x29; as packageSilver&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product&#xa;  where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;    and product_order.product_id_fk &#x3d; product.product_id_pk&#xa;    and product.product_id_nk &#x3d; &#x27;PACKAGE_SILVER&#x27;&#xa;    and status &#x3d; &#x27;PAID&#x27;&#xa;    and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>725</xloc>
+      <yloc>549</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>revenue</name>
+    <type>DBJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <rowlimit>0</rowlimit>
+    <sql>select sum&#x28;product_order.price&#x29; revenue&#xa;  from &#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.product_order&#xa;	  ,&#x24;&#x7b;DW_BLOCKETDB.SCHEMA.ODS&#x7d;.ad&#xa; where ad.ad_id_pk &#x3d; product_order.ad_id_fk&#xa;   and status &#x3d; &#x27;PAID&#x27;&#xa;   and seller_id_fk &#x3d; &#x3f;</sql>
+    <outer_join>N</outer_join>
+    <replace_vars>Y</replace_vars>
+    <parameter>
+      <field>
+        <name>seller_id_pk</name>
+        <type>Integer</type>
+      </field>
+    </parameter>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>950</xloc>
+      <yloc>549</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

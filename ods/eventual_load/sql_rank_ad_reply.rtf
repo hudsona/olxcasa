@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red245\green245\blue245;\red128\green0\blue0;\red255\green0\blue0;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18640\viewh10900\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \cb2 \
+CREATE SEQUENCE ods.ad_type_ad_type_pk_seq INCREMENT 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1;
+\f1\fs26 \cb1 \
+ALTER TABLE ods.ad_reply_ad_reply_id_pk_seq OWNER TO postgres;\
+ALTER SEQUENCE ad_reply_ad_reply_id_pk_seq OWNED BY ad_reply.ad_reply_id_pk;\
+ALTER TABLE ods.ad_reply ALTER COLUMN ad_reply_id_pk SET NOT NULL;\
+ALTER TABLE ods.ad_reply ALTER COLUMN ad_reply_id_pk SET DEFAULT nextval('ods.ad_reply_ad_reply_id_pk_seq'::regclass);\
+
+\f0\fs24 \cb2  \
+drop index ods.
+\f2\fs22 \cb1 idx_ad_reply_ad_id_fk;
+\f0\fs24 \cb2 \
+drop index ods.
+\f2\fs22 \cb1 idx_ad_reply_buyer_id_fk;
+\f0\fs24 \cb2 \
+drop index ods.
+\f2\fs22 \cb1 idx_ad_reply_buyer_rank;
+\f0\fs24 \cb2 \
+drop index ods.
+\f2\fs22 \cf3 \cb1 idx_ad_reply_rank;
+\f0\fs24 \cf0 \cb2 \
+\
+alter table ods.ad_reply rename to ad_reply_old;\
+alter table ods.ad_reply_rank rename to ad_reply;\
+\
+ALTER TABLE ods.ad_reply ADD PRIMARY KEY (ad_reply_id_pk);
+\f1\fs26 \cb1 \
+
+\f2\fs22 \cf3 CREATE\cf0  \cf3 INDEX\cf0  idx_ad_reply_ad_id_fk \cf3 ON\cf0  ods.ad_reply (ad_id_fk)\cf4 ;\
+\cf3 CREATE\cf0  \cf3 INDEX\cf0  idx_ad_reply_buyer_id_fk \cf3 ON\cf0  ods.ad_reply (buyer_id_fk)\cf4 ;\cf3 \
+CREATE\cf0  \cf3 INDEX\cf0  idx_ad_reply_buyer_rank \cf3 ON\cf0  ods.ad_reply (buyer_id_fk,rank)\cf4 ;\
+\cf3 CREATE\cf0  \cf3 INDEX idx_ad_reply_rank  ON \cf0 ods.ad_reply (rank)\cf4 ;\
+
+\f1\fs26 \cf0 ALTER TABLE ods.ad_reply ALTER COLUMN ad_reply_id_pk SET NOT NULL;\
+ALTER TABLE ods.ad_reply ALTER COLUMN ad_reply_id_pk SET DEFAULT nextval('ods.ad_reply_ad_reply_id_pk_seq'::regclass);\
+tipo\
+\
+
+\f0\fs24 \cb2 ALTER TABLE dm.seller ADD PRIMARY KEY (seller_id_pk);
+\f1\fs26 \cb1 \
+
+\f0\fs24 \cb2 ALTER TABLE dm.buyer ADD PRIMARY KEY (buyer_id_pk);
+\f1\fs26 \cb1 \
+
+\f0\fs24 \cb2 ALTER TABLE dm.ad ADD PRIMARY KEY (ad_id_pk);
+\f1\fs26 \cb1 \
+
+\f0\fs24 \cb2 ALTER TABLE dm.user ADD PRIMARY KEY (user_id_pk);\
+
+\f1\fs26 \cb1 \
+}

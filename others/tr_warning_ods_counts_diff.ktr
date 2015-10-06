@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>tr_warning_ods_counts</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2014&#x2f;12&#x2f;10 11&#x3a;47&#x3a;07.965</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2014&#x2f;12&#x2f;10 11&#x3a;47&#x3a;07.965</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>blocketdb</name>
+    <server>&#x24;&#x7b;BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>dw_blocketdb</name>
+    <server>&#x24;&#x7b;DW_BLOCKETDB.HOST&#x7d;</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DW_BLOCKETDB.DATABASE&#x7d;</database>
+    <port>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</port>
+    <username>&#x24;&#x7b;DW_BLOCKETDB.USERNAME&#x7d;</username>
+    <password>&#x24;&#x7b;DW_BLOCKETDB.PASSWORD&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DW_BLOCKETDB.PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>blocket</from><to>Join Rows &#x28;cartesian product&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>stg</from><to>Join Rows &#x28;cartesian product&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>ods</from><to>Join Rows &#x28;cartesian product&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Join Rows &#x28;cartesian product&#x29;</from><to>Modified Java Script Value</to><enabled>Y</enabled> </hop>
+  <hop> <from>Modified Java Script Value</from><to>Row Normaliser</to><enabled>Y</enabled> </hop>
+  <hop> <from>Row Normaliser</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>ods.warning_counts</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Join Rows &#x28;cartesian product&#x29;</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <cache_size>500</cache_size>
+      <main/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue/>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>279</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Modified Java Script Value</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#xa;&#xa;&#xa;var ads_creation_total_diff_blocket_stg &#x3d; ads_creation_total_blocket - ads_creation_total_stg&#x3b;&#xa;var ads_approval_total_diff_blocket_stg &#x3d; ads_approval_total_blocket - ads_approval_total_stg&#x3b;&#xa;var ads_deletion_total_diff_blocket_stg &#x3d; ads_deletion_total_blocket - ads_deletion_total_stg&#x3b;&#xa;var product_order_total_diff_blocket_stg &#x3d; product_order_total_blocket - product_order_total_stg&#x3b;&#xa;var ad_reply_total_diff_blocket_stg &#x3d; ad_reply_total_blocket - ad_reply_total_stg&#x3b;&#xa;&#xa;var ads_creation_total_diff_stg_ods &#x3d; ads_creation_total_stg - ads_creation_total_ods&#x3b;&#xa;var ads_approval_total_diff_stg_ods &#x3d; ads_approval_total_stg - ads_approval_total_ods&#x3b;&#xa;var ads_deletion_total_diff_stg_ods &#x3d; ads_deletion_total_stg - ads_deletion_total_ods&#x3b;&#xa;var product_order_total_diff_stg_ods &#x3d; product_order_total_stg - product_order_total_ods&#x3b;&#xa;var ad_reply_total_diff_stg_ods &#x3d; ad_reply_total_stg - ad_reply_total_ods&#x3b;&#xa;&#xa;var ads_creation_dist_diff_blocket_stg &#x3d; ads_creation_distinct_blocket - ads_creation_distinct_stg&#x3b;&#xa;var ads_approval_dist_diff_blocket_stg &#x3d; ads_approval_distinct_blocket - ads_approval_distinct_stg&#x3b;&#xa;var ads_deletion_dist_diff_blocket_stg &#x3d; ads_deletion_distinct_blocket - ads_deletion_distinct_stg&#x3b;&#xa;var product_order_dist_diff_blocket_stg &#x3d; product_order_distinct_blocket - product_order_distinct_stg&#x3b;&#xa;var ad_reply_dist_diff_blocket_stg &#x3d; ad_reply_distinct_blocket - ad_reply_distinct_stg&#x3b;&#xa;&#xa;var ads_creation_dist_diff_stg_ods &#x3d; ads_creation_distinct_stg - ads_creation_distinct_ods&#x3b;&#xa;var ads_approval_dist_diff_stg_ods &#x3d; ads_approval_distinct_stg - ads_approval_distinct_ods&#x3b;&#xa;var ads_deletion_dist_diff_stg_ods &#x3d; ads_deletion_distinct_stg - ads_deletion_distinct_ods&#x3b;&#xa;var product_order_dist_diff_stg_ods &#x3d; product_order_distinct_stg - product_order_distinct_ods&#x3b;&#xa;var ad_reply_dist_diff_stg_ods &#x3d; ad_reply_distinct_stg - ad_reply_distinct_ods&#x3b;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>ads_creation_total_diff_blocket_stg</name>
+        <rename>ads_creation_total_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_approval_total_diff_blocket_stg</name>
+        <rename>ads_approval_total_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_deletion_total_diff_blocket_stg</name>
+        <rename>ads_deletion_total_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>product_order_total_diff_blocket_stg</name>
+        <rename>product_order_total_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ad_reply_total_diff_blocket_stg</name>
+        <rename>ad_reply_total_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_creation_total_diff_stg_ods</name>
+        <rename>ads_creation_total_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_approval_total_diff_stg_ods</name>
+        <rename>ads_approval_total_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_deletion_total_diff_stg_ods</name>
+        <rename>ads_deletion_total_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>product_order_total_diff_stg_ods</name>
+        <rename>product_order_total_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ad_reply_total_diff_stg_ods</name>
+        <rename>ad_reply_total_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_creation_dist_diff_blocket_stg</name>
+        <rename>ads_creation_dist_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_approval_dist_diff_blocket_stg</name>
+        <rename>ads_approval_dist_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_deletion_dist_diff_blocket_stg</name>
+        <rename>ads_deletion_dist_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>product_order_dist_diff_blocket_stg</name>
+        <rename>product_order_dist_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ad_reply_dist_diff_blocket_stg</name>
+        <rename>ad_reply_dist_diff_blocket_stg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_creation_dist_diff_stg_ods</name>
+        <rename>ads_creation_dist_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_approval_dist_diff_stg_ods</name>
+        <rename>ads_approval_dist_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ads_deletion_dist_diff_stg_ods</name>
+        <rename>ads_deletion_dist_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>product_order_dist_diff_stg_ods</name>
+        <rename>product_order_dist_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>ad_reply_dist_diff_stg_ods</name>
+        <rename>ad_reply_dist_diff_stg_ods</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>470</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Row Normaliser</name>
+    <type>Normaliser</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <typefield>schema</typefield>
+    <fields>      <field>        <name>ads_creation_total_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_creation_total</norm>
+        </field>      <field>        <name>ads_approval_total_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_approval_total</norm>
+        </field>      <field>        <name>ads_deletion_total_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_deletion_total</norm>
+        </field>      <field>        <name>product_order_total_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>product_order_total</norm>
+        </field>      <field>        <name>ad_reply_total_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ad_reply_total</norm>
+        </field>      <field>        <name>ads_creation_total_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_creation_total</norm>
+        </field>      <field>        <name>ads_approval_total_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_approval_total</norm>
+        </field>      <field>        <name>ads_deletion_total_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_deletion_total</norm>
+        </field>      <field>        <name>product_order_total_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>product_order_total</norm>
+        </field>      <field>        <name>ad_reply_total_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ad_reply_total</norm>
+        </field>      <field>        <name>ads_creation_dist_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_creation_distinct</norm>
+        </field>      <field>        <name>ads_approval_dist_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_approval_distinct</norm>
+        </field>      <field>        <name>ads_deletion_dist_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ads_deletion_distinct</norm>
+        </field>      <field>        <name>product_order_dist_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>product_order_distinct</norm>
+        </field>      <field>        <name>ad_reply_dist_diff_blocket_stg</name>
+        <value>blocket_stg</value>
+        <norm>ad_reply_distinct</norm>
+        </field>      <field>        <name>ads_creation_dist_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_creation_distinct</norm>
+        </field>      <field>        <name>ads_approval_dist_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_approval_distinct</norm>
+        </field>      <field>        <name>ads_deletion_dist_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ads_deletion_distinct</norm>
+        </field>      <field>        <name>product_order_dist_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>product_order_distinct</norm>
+        </field>      <field>        <name>ad_reply_dist_diff_stg_ods</name>
+        <value>stg_ods</value>
+        <norm>ad_reply_distinct</norm>
+        </field>      </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>664</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>ads_creation_total</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ads_approval_total</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ads_deletion_total</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>product_order_total</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ad_reply_total</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ads_creation_distinct</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ads_approval_distinct</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ads_deletion_distinct</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>product_order_distinct</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ad_reply_distinct</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>schema</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_from</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>date_to</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>insert_date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>ads_creation_total</name>
+        <rename>ads_creation_total</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ads_approval_total</name>
+        <rename>ads_approval_total</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ads_deletion_total</name>
+        <rename>ads_deletion_total</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>product_order_total</name>
+        <rename>product_order_total</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ad_reply_total</name>
+        <rename>ad_reply_total</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ads_creation_distinct</name>
+        <rename>ads_creation_distinct</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ads_approval_distinct</name>
+        <rename>ads_approval_distinct</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ads_deletion_distinct</name>
+        <rename>ads_deletion_distinct</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>product_order_distinct</name>
+        <rename>product_order_distinct</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ad_reply_distinct</name>
+        <rename>ad_reply_distinct</rename>
+        <type>None</type>
+        <length>16</length>
+        <precision>2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>805</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>blocket</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <sql>select ads_creation_distinct as ads_creation_distinct_blocket&#xa;	  ,ads_approval_distinct as ads_approval_distinct_blocket&#xa;	  ,ads_deletion_distinct as ads_deletion_distinct_blocket&#xa;	  ,ad_reply_distinct 	 as ad_reply_distinct_blocket&#xa;	  ,product_order_distinct as product_order_distinct_blocket&#xa;	  ,ads_creation_total as ads_creation_total_blocket&#xa;	  ,ads_approval_total as ads_approval_total_blocket&#xa;	  ,ads_deletion_total as ads_deletion_total_blocket&#xa;	  ,ad_reply_total as ad_reply_total_blocket&#xa;	  ,product_order_total as product_order_total_blocket&#xa;	  ,date_from&#xa;	  ,date_to&#xa;	  ,insert_date&#xa; from ods.warning_counts &#xa;where warning_counts_id_pk &#x3d; &#x28;select max&#x28;warning_counts_id_pk&#x29; from ods.warning_counts where &#x22;schema&#x22;&#x3d; &#x27;blocket&#x27;&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>95</xloc>
+      <yloc>47</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ods</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <sql>select ads_creation_distinct as ads_creation_distinct_ods&#xa;	  ,ads_approval_distinct as ads_approval_distinct_ods&#xa;	  ,ads_deletion_distinct as ads_deletion_distinct_ods&#xa;	  ,ad_reply_distinct as ad_reply_distinct_ods&#xa;	  ,product_order_distinct as product_order_distinct_ods	  &#xa;	  ,ads_creation_total as ads_creation_total_ods&#xa;	  ,ads_approval_total as ads_approval_total_ods&#xa;	  ,ads_deletion_total as ads_deletion_total_ods&#xa;	  ,ad_reply_total as ad_reply_total_ods&#xa;	  ,product_order_total as product_order_total_ods	&#xa;from ods.warning_counts&#xa;where warning_counts_id_pk &#x3d; &#x28;select max&#x28;warning_counts_id_pk&#x29; from ods.warning_counts where &#x22;schema&#x22;&#x3d; &#x27;ods&#x27;&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>95</xloc>
+      <yloc>254</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ods.warning_counts</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <schema>ods</schema>
+    <table>warning_counts</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>Y</return_keys>
+    <return_field>warning_counts_id_pk</return_field>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>936</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stg</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>dw_blocketdb</connection>
+    <sql>select ads_creation_distinct as ads_creation_distinct_stg&#xa;	  ,ads_approval_distinct as ads_approval_distinct_stg&#xa;	  ,ads_deletion_distinct as ads_deletion_distinct_stg&#xa;	  ,ad_reply_distinct 	 as ad_reply_distinct_stg&#xa;	  ,product_order_distinct as product_order_distinct_stg&#xa;	  ,ads_creation_total 	 as ads_creation_total_stg&#xa;	  ,ads_approval_total 	 as ads_approval_total_stg&#xa;	  ,ads_deletion_total 	 as ads_deletion_total_stg&#xa;	  ,ad_reply_total 		 as ad_reply_total_stg&#xa;	  ,product_order_total 	 as product_order_total_stg&#xa; from ods.warning_counts&#xa;where warning_counts_id_pk &#x3d; &#x28;select max&#x28;warning_counts_id_pk&#x29; from ods.warning_counts where &#x22;schema&#x22;&#x3d; &#x27;stg&#x27;&#x29;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>95</xloc>
+      <yloc>157</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

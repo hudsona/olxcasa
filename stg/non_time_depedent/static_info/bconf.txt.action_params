@@ -1,0 +1,35 @@
+# Delete reasons
+*.*.deletion_reason.1.description=Vendi pelo bomnegócio.com
+*.*.deletion_reason.2.description=Vendi por outro meio 
+*.*.deletion_reason.3.description=Desisti de vender
+*.*.deletion_reason.4.description=Quero colocar meu anúncio no topo
+*.*.deletion_reason.5.description=Outro motivo
+*.*.deletion_reason.6.description=Quero editar meu anúncio
+*.*.deletion_reason_edit_option = 6
+
+#Delete reasons order keys
+*.*.deletion_reason_order.1=1
+*.*.deletion_reason_order.2=2
+*.*.deletion_reason_order.3=3
+*.*.deletion_reason_order.4=4
+*.*.deletion_reason_order.5=6
+*.*.deletion_reason_order.6=5
+
+#Time to sell descriptions
+*.*.time_to_sell.1.description=Em 24h
+*.*.time_to_sell.2.description=Em 1 semana
+*.*.time_to_sell.3.description=Em 1 mês
+*.*.time_to_sell.4.description=Mais de um mês
+*.*.time_to_sell.5.description=Não me lembro
+
+#Recommend level values
+*.*.recommend_level.1.value=1
+*.*.recommend_level.2.value=2
+*.*.recommend_level.3.value=3
+*.*.recommend_level.4.value=4
+*.*.recommend_level.5.value=5
+*.*.recommend_level.6.value=6
+*.*.recommend_level.7.value=7
+*.*.recommend_level.8.value=8
+*.*.recommend_level.9.value=9
+*.*.recommend_level.10.value=10
